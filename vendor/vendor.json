@@ -2,5 +2,8 @@
 	"comment": "",
 	"ignore": "test",
 	"package": [],
+	"heroku": {
+		"goVersion": "go1.11"
+	},
 	"rootPath": "github.com/jaistudy1996/jayantarora_go"
 }
