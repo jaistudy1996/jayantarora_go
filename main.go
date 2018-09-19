@@ -15,7 +15,7 @@ func main() {
 
 	// Http handler functions
 	http.HandleFunc("/", handleIndex)
-	http.Handle("/assets", http.FileServer(http.Dir("static/assets/")))
+	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("static/assets/"))))
 	http.HandleFunc("/favicon.ico", handleFavicon)
 	http.HandleFunc("/resume", handleResume)
 	log.Fatal(http.ListenAndServe(":"+port, nil))
